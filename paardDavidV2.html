@@ -1,0 +1,74 @@
+<center>
+<h1> <marquee>Hoi dit is een html pagina met canvas.</marquee></h1>
+	<canvas id="ctx" width="1000" height="1000" style="border:1px solid #000000;"></canvas>
+</center>
+<script>  
+
+window.addEventListener('load', function () {
+
+var ctx = document.getElementById("ctx").getContext("2d"); 
+ctx.imageSmoothingEnabled = true;
+var paardImage = new Image();
+paardImage.src = 'https://cdn.discordapp.com/avatars/249985268075986955/e95064c78de405f6f0ca6ec48bd73eca.png?size=64';
+
+  paardImage.addEventListener('load', function () {
+
+    var interval = setInterval(function() {
+      var x = 0, y = 0;
+      
+      return function () {
+        //ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.drawImage(paardImage, x, y);
+
+        x += getRandomInt(60) + 1;
+		y += getRandomInt(70) + 2;
+		
+        if (x > ctx.canvas.width) {
+          x = 0;
+        }
+		if(y > ctx.canvas.height){
+		 y = 0;
+		}
+		
+      };
+    }(), 1000/1000);
+  }, false);
+}, false);
+
+window.addEventListener('load', function () {
+
+var ctx = document.getElementById("ctx").getContext("2d"); 
+ ctx.imageSmoothingEnabled = true;
+var davidImage = new Image();
+davidImage.src = 'https://cdn.discordapp.com/avatars/287197288625864705/ecbad83ab2b442dea1d270281569f6f2.png?size=64';
+
+  davidImage.addEventListener('load', function () {
+
+    var interval = setInterval(function() {
+      var x = 2, y = 2;
+      
+      return function () {
+        //ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.drawImage(davidImage, x, y);
+
+        x += getRandomInt(60) + 1;
+		y += getRandomInt(70) + 2;
+		
+        if (x > ctx.canvas.width) {
+          x = 2;
+        }
+		if(y > ctx.canvas.height){
+		 y = 2;
+		}
+		
+      };
+    }(), 1000/1000);
+  }, false);
+}, false);
+
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+</script>
