@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+    height: 100vh;
+}
+
+#wrapper_content {
+	display: inline-flex;
+	  max-height: 100vh;
+}
+
+nav { 
+  flex: 0 0 auto;
+}
+
+#wrapper {
+  flex: 0 1 auto;
+  width: 100%;
+  overflow: auto;
+}
+
+.footer {
+  flex: 1 1 auto;
+  background: red;
+  height: 10px;
+}
+
+/* Not important */
+body {
+  font-family: Georgia, sans-serif;
+}
+nav {
+  background: dodgerblue;
+  color: powderblue;
+  overflow-y: auto;	
+}
+nav a {
+  color: aliceblue;
+}
+#wrapper {
+  padding: 0 1em;
+  color: #444;
+}

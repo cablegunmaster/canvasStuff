@@ -1,0 +1,48 @@
+html, body {
+	height:100%;
+	min-height:100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.body_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.StickyHeader,.StickyFooter {
+  flex: 0 0 auto;
+  background: red;
+}
+
+.StickyContent {
+  flex: 1 1 auto;
+  background: green;
+  overflow:scroll;
+}
+
+.wrapper {
+	display: flex;
+	width: auto;
+	height: inherit;
+	max-height: 100vh;
+}
+
+.menu_wrapper {
+	flex: 0 0 auto;
+	min-width: 400px;
+	background-color: yellow;
+}
+
+.menu {
+	overflow-y: auto;
+	margin:0;
+	padding:0;
+}
+
+.Flexitem {
+	flex: 1 1 auto;
+	overflow: auto;
+	width: 100%;
+	background: Aqua;
+}

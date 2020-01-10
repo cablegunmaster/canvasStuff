@@ -1,0 +1,1 @@
+Gets a scrollbar down and or missing content if scrollbar is fixed (could be fixed with adding margin (the size of footer)?
